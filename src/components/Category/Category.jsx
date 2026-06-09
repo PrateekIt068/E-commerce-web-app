@@ -44,7 +44,7 @@ export default Category
 const category = [
     {
         id: 1,
-        title: `Fruits and veggies`,
+        title: `Fruits & Veggies`,
         description: `Fresh, organic produce sourced daily from local farms. Explore a wide range of seasonal fruits and crisp vegetables.`,
         image: FruitsCat
     },
