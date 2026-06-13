@@ -1,10 +1,22 @@
 import React, { useState } from 'react'
 import Heading from '../Heading/Heading'
+import ProductList from '../ProductList/ProductList'
+import Cards from '../Cards/Cards'
+import Button from '../Button/Button'
 
 const Products = () => {
 
     const categories = ['All', 'Fruits', 'Vegetables', 'Dairy', 'Seafood']
     const [activeTab, setActiveTab] = useState('All');
+
+    let filteredItems = activeTab === 'All' 
+    ? ProductList : ProductList.filter(item=>item.category === activeTab);
+
+    const renderCards = filteredItems.slice(0, 8).map(product=> {
+        return(
+            <Cards image={product.image} name={product.name} price={product.price}/>
+        )
+    })
 
     return (
         <section>
@@ -23,6 +35,15 @@ const Products = () => {
                             </button>
                         )
                     })}
+                </div>
+
+                {/* Product Listing */}
+                <div className='grid grid-cols-4 gap-9 mt-20'>
+                    {renderCards}
+                </div>
+
+                <div className='mt-15 mx-auto w-fit'>
+                    <Button content="View All"/>
                 </div>
             </div>
         </section>
