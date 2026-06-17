@@ -9,10 +9,12 @@ const Process = () => {
 
   const renderSteps = steps.map(item=>{
     return (
-      <div className={`flex-1 basis[300px] ${item.id % 2 === 0 ? 'md:-mt-100' : ''}`}>
-        <span className='flex justify-center items-center w-18 h-18 md:mx-auto rounded-full text-8xl bg-zinc-800 text-white outline-[3px] outline-offset-7 outline-zinc-800 outline-dashed'>{item.number}</span>
+      <div className={`flex-1 basis-[300px] ${item.id % 2 === 0 ? 'md:-mt-100' : ''}`}>
+        <div className="flex justify-center md:justify-start mb-6">
+          <span className='flex justify-center items-center w-18 h-18 md:mx-auto rounded-full text-8xl bg-zinc-800 text-white outline-[3px] outline-offset-7 outline-zinc-800 outline-dashed'>{item.number}</span>
+        </div>
 
-        <div className='flex items-center gap-x-5 mt-10'>
+        <div className='flex justify-center items-center gap-x-5 mt-10'>
           <span className='flex justify-center items-center text-3xl bg-gradient-to-b from-orange-400 to-orange-500 text-white w-15 h-15 rounded-full'>{item.icon}</span>
 
           <div className='flex-1'>
@@ -32,7 +34,7 @@ const Process = () => {
                 <Heading highlight="Our" heading="Process" />
             </div>
             
-            <div className='flex flex-wrap items-center justify-center md:mt-20 mt-10 md:pt-50'>
+            <div className='flex flex-wrap gap-y-17 items-center justify-center md:mt-20 mt-10 md:pt-50'>
               {renderSteps}
             </div>
         </div>
