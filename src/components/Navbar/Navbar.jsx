@@ -3,6 +3,7 @@ import { IoIosHeart } from "react-icons/io";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoSearch } from "react-icons/io5";
 import { TbMenu2, TbMenu3 } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -26,9 +27,9 @@ const Navbar = () => {
         <header className={`bg-white fixed top-0 right-0 left-0 z-50 ${isScrolled ? 'shadow-lg' : ''}`}>
             <nav className='max-w-[1400px] mx-auto px-10 md:h-[12vh] h-[10vh] flex justify-between items-center'>
                 {/* Logo */}
-                <a href="#" className='text-3xl font-bold text-zinc-700'>
+                <Link to="/" className='text-3xl font-bold text-zinc-700'>
                     Heavy<span className='text-green-700'>Cart</span>
-                </a>
+                </Link>
 
                 {/* Desktop menu */}
                 <ul className='md:flex items-center gap-x-15 hidden'>

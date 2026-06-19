@@ -12,15 +12,13 @@ import Footer from '../Footer/Footer'
 const Home = () => {
   return (
     <div>
-        <Navbar />
-        <Hero />
-        <Category />
-        <Values />
-        <Products />
-        <Discount />
-        <Process />
-        <Testomonials />
-        <Footer />
+      <Hero />
+      <Category />
+      <Values />
+      <Products />
+      <Discount />
+      <Process />
+      <Testomonials />
     </div>
   )
 }

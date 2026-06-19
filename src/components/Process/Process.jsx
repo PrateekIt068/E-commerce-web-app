@@ -7,7 +7,7 @@ import { BsTruck } from "react-icons/bs";
 
 const Process = () => {
 
-  const renderSteps = steps.map(item=>{
+  const renderSteps = steps.map(item => {
     return (
       <div key={item.id} className={`flex-1 basis-[300px] ${item.id % 2 === 0 ? 'md:-mt-100' : ''}`}>
         <div className="flex justify-center md:justify-start mb-6">
@@ -29,15 +29,15 @@ const Process = () => {
 
   return (
     <section>
-        <div className='max-w-[1400px] mx-auto px-10 py-20'>
-            <div className='w-fit mr-auto'>
-                <Heading highlight="Our" heading="Process" />
-            </div>
-            
-            <div className='flex flex-wrap gap-y-17 items-center justify-center md:mt-20 mt-10 md:pt-50'>
-              {renderSteps}
-            </div>
+      <div className='max-w-[1400px] mx-auto px-10 py-20'>
+        <div className='w-fit mr-auto'>
+          <Heading highlight="Our" heading="Process" />
         </div>
+
+        <div className='flex flex-wrap gap-y-17 items-center justify-center md:mt-20 mt-10 md:pt-50'>
+          {renderSteps}
+        </div>
+      </div>
     </section>
   )
 }
@@ -46,28 +46,28 @@ export default Process
 
 const steps = [
   {
-    id: 1, 
+    id: 1,
     number: <TbCircleNumber1Filled />,
     title: 'Sourcing',
     para: 'It is a long established fact that a reader',
     icon: <PiPlant />,
   },
   {
-    id: 2, 
+    id: 2,
     number: <TbCircleNumber2Filled />,
     title: 'Manufacturing',
     para: 'It is a long established fact that a reader',
     icon: <PiFactory />,
   },
   {
-    id: 3, 
+    id: 3,
     number: <TbCircleNumber3Filled />,
     title: 'Quality Control',
     para: 'It is a long established fact that a reader',
     icon: <SlBadge />,
   },
   {
-    id: 4, 
+    id: 4,
     number: <TbCircleNumber4Filled />,
     title: 'Logistics',
     para: 'It is a long established fact that a reader',

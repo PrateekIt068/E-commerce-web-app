@@ -27,22 +27,22 @@ const Testomonials = () => {
           </button>
         </div>
 
-        <Swiper 
-        navigation={{
-          nextEl: ".custom-next",
-          prevEl: ".custom-prev",
-        }} 
-        loop={true}
-        breakpoints={{
-          640: {slidesPerView: 1, spaceBetween: 20},
-          768: {slidesPerView: 2, spaceBetween: 20},
-          1024: {slidesPerView: 3, spaceBetween: 20},
-        }}
-        modules={[Navigation]} className="mySwiper">
+        <Swiper
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          loop={true}
+          breakpoints={{
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+          }}
+          modules={[Navigation]} className="mySwiper">
           {
             review.map(item => {
               return (
-                <SwiperSlide className='bg-zinc-100 rounded-xl p-8'>
+                <SwiperSlide key={item.id} className='bg-zinc-100 rounded-xl p-8'>
                   <div className='flex gap-5 items-center'>
                     <div className='w-16 h-16 rounded-full bg-red-500 outline-2 outline-orange-500 outline-offset-4 overflow-hidden'>
                       <img src={item.image} className='w-full h-full' />
@@ -51,8 +51,8 @@ const Testomonials = () => {
                       <h5 className='text-xl font-bold'>{item.name}</h5>
                       <p className='text-zinc-600'>{item.profession}</p>
                       <span className='flex text-yellow-400 mt-3 text-xl gap-1'>
-                        {Array.from({length: item.rating}, (_, index)=>(
-                          <FaStar />
+                        {Array.from({ length: item.rating }, (_, index) => (
+                          <FaStar key={index} />
                         ))}
                       </span>
                     </div>

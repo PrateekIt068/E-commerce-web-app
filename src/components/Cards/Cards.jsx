@@ -2,7 +2,7 @@ import React from 'react'
 import { FaHeart, FaPlus } from 'react-icons/fa'
 import Button from '../Button/Button'
 
-const Cards = ({image, name, price}) => {
+const Cards = ({ image, name, price }) => {
     return (
         <div className='bg-zinc-100 p-5 rounded-xl'>
 
